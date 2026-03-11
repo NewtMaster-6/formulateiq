@@ -166,7 +166,7 @@ export default function App() {
             <div style={{ background: "linear-gradient(135deg, rgba(110,231,183,0.07), rgba(59,130,246,0.05))", border: "1px solid rgba(110,231,183,0.18)", borderRadius: 14, padding: "24px 28px", marginBottom: 24 }}>
               <div style={{ fontSize: 11, fontWeight: 700, color: "#6ee7b7", letterSpacing: "0.08em", marginBottom: 10 }}>✦ AI PRODUCT CONCEPT SEARCH</div>
               <div style={{ display: "flex", gap: 10 }}>
-                <input value={query} onChange={e => setQuery(e.target.value)} onKeyDown={e => e.key === "Enter" && handleSearch()} placeholder='e.g. "I want to make a women\'s health drink for detox"' style={{ flex: 1, background: "rgba(8,12,20,0.8)", border: "1px solid rgba(110,231,183,0.2)", borderRadius: 9, padding: "12px 16px", color: "#dde4ee", fontSize: 14, outline: "none", fontFamily: "inherit" }} />
+                <input value={query} onChange={e => setQuery(e.target.value)} onKeyDown={e => e.key === "Enter" && handleSearch()} placeholder="Describe the product you want to make..." style={{ flex: 1, background: "rgba(8,12,20,0.8)", border: "1px solid rgba(110,231,183,0.2)", borderRadius: 9, padding: "12px 16px", color: "#dde4ee", fontSize: 14, outline: "none", fontFamily: "inherit" }} />
                 <button onClick={handleSearch} disabled={loading || !query.trim()} style={{ padding: "12px 24px", background: loading ? "rgba(59,130,246,0.3)" : "linear-gradient(135deg, #3b82f6, #2563eb)", border: "none", borderRadius: 9, color: "white", fontWeight: 700, fontSize: 14, cursor: loading ? "not-allowed" : "pointer" }}>{loading ? "Matching…" : "Match →"}</button>
               </div>
               {aiResults && (
